@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inconsolata.className} antialiased flex flex-col h-screen`}
+        className={`${inconsolata.className} antialiased flex flex-col min-h-screen`}
       >
         <Header/>
 
