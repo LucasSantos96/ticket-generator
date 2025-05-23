@@ -1,22 +1,37 @@
-"use client";
+'use client';
 
-import React from "react";
+import { useRouter } from 'next/navigation';
+import React from 'react';
 
 export default function Form() {
+  const router = useRouter(); 
 
-  
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const formData = new FormData(event.currentTarget); //Pega todos os dados do form
-    const userName = formData.get("userName")?.toString();
-    const email = formData.get("email")?.toString();
-    const github = formData.get("github")?.toString();
+    const formData = new FormData(event.currentTarget);
 
+    // Pegando os dados do formulário
+    const userName = formData.get("userName");
+    const email = formData.get("email");
+    const github = formData.get("github");
+
+    // Criando objeto com os dados
+    const userData = {
+      userName,
+      email,
+      github
+    };
+
+    // Salvando no localStorage
+    localStorage.setItem("userData", JSON.stringify(userData));
+
+    // Redirecionando para a página de sucesso
+    router.push("/ticket-success");
   };
 
   return (
-    <div className="flex  flex-col justify-center items-center mt-8">
+    <div className="flex flex-col justify-center items-center mt-8">
       <div className="mt-4">
         <form className="w-xs space-y-3" onSubmit={handleSubmit}>
           <p className="flex flex-col">
@@ -30,13 +45,13 @@ export default function Form() {
           </p>
 
           <p className="flex flex-col">
-            Email Adress
+            Email Address
             <input
               className="border bg-custom rounded-md p-1.5 text-xs"
-              type="text"
+              type="email"
               id="inEmail"
-              placeholder="email@example.com"
               name="email"
+              placeholder="email@example.com"
             />
           </p>
 
@@ -46,8 +61,8 @@ export default function Form() {
               className="border bg-custom rounded-md p-1.5 text-xs"
               type="text"
               id="ingithub"
-              placeholder="@yourusername"
               name="github"
+              placeholder="@yourusername"
             />
           </p>
 
