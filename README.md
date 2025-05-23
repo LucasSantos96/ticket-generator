@@ -70,4 +70,4 @@ Editar
 ├── tsconfig.json
 └── package.json
 📫 Contato
-Feito com 💻 por Lucas Santos
+Feito com 💻 por [Lucas Santos](https://www.linkedin.com/in/lucas-santos-de-oliveira-874497325/)
