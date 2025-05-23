@@ -39,6 +39,7 @@ Sistema web moderno que gera um ticket personalizado para o usuário após o env
 1. Clone o repositório:
 
 ```bash
+
 git clone https://github.com/LucasSantos96/ticket-generator.git
 
 cd ticket-generator
@@ -46,6 +47,7 @@ cd ticket-generator
 npm install
 
 npm run dev
+```
 Abra http://localhost:3000 no navegador para ver o app.
 
 📝 Scripts úteis
@@ -59,15 +61,15 @@ npm run start — Roda o app em produção após o build
 bash
 Copiar
 Editar
-📦ticket-generator
+## 📦ticket-generator
 ├── app/
-│   ├── components/
-│   │   └── UploadBox.tsx
-│   └── ticket/success/page.tsx
-├── public/
-├── styles/
-├── README.md
-├── tsconfig.json
-└── package.json
-📫 Contato
-Feito com 💻 por [Lucas Santos](https://www.linkedin.com/in/lucas-santos-de-oliveira-874497325/)
+│   ├── components/ <br/>
+│   │   └── UploadBox.tsx <br/>
+│   └── ticket/success/page.tsx <br/>
+├── public/ <br/>
+├── styles/ <br/>
+├── README.md <br/>
+├── tsconfig.json <br/>
+└── package.json <br/>
+## 📫 Contato
+Feito com 💻 por - [Lucas Santos](https://www.linkedin.com/in/lucas-santos-de-oliveira-874497325/) 
